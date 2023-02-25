@@ -1,0 +1,17 @@
+{
+    "name": "jp.juhakurisu.popoinput",
+    "rootNamespace": "",
+    "references": [
+        "GUID:16ef4e2844fc94d4bb8dc27d00ec636d",
+        "GUID:c272dca4282f1704f8c0e5c6a32a92c2"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

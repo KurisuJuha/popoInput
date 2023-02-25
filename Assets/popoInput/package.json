@@ -1,0 +1,12 @@
+{
+    "name": "jp.juhakurisu.popoinput",
+    "displayName": "popoInput",
+    "version": "0.0.0",
+    "dependencies": {
+        "jp.juhakurisu.popoextentions": "1.3.0",
+        "jp.juhakurisu.popobyteserializer": "1.2.0"
+    },
+    "author": {
+        "name": "JuhaKurisu"
+    }
+}
