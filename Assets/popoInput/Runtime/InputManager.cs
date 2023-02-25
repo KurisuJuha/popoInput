@@ -11,6 +11,9 @@ namespace JuhaKurisu.PopoTools.InputSystem
 
         public InputManager(int playerCount, Func<byte[]> GetInput)
         private readonly Func<byte[]> GetInput;
+        private readonly Guid clientID;
+        private readonly Guid secretID;
+
         {
             this.playerCount = playerCount;
             this.GetInput = GetInput;
