@@ -48,5 +48,17 @@ namespace JuhaKurisu.PopoTools.InputSystem
             // 公開用の変数にセット
             this.clients = new(clients);
         }
+
+        public byte[] CreateInputBytes()
+        {
+            DataWriter writer = new DataWriter();
+
+            // サーバーとのみ共有しているsecretIDを送る
+            writer.Append(secretID);
+            // input内容を送る
+            writer.AppendWithLength(GetInput());
+
+            return writer.bytes.ToArray();
+        }
     }
 }
