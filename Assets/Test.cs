@@ -1,13 +1,13 @@
 using System;
 using System.Linq;
-using UnityEngine;
-using JuhaKurisu.PopoTools.ByteSerializer;
+using JuhaKurisu.PopoTools.Utility;
 using JuhaKurisu.PopoTools.Extentions;
 using JuhaKurisu.PopoTools.InputSystem;
+using JuhaKurisu.PopoTools.ByteSerializer;
 
-public class Test : MonoBehaviour
+public class Test : PopoBehaviour
 {
-    void Start()
+    protected override void Start()
     {
         Guid client1ID = Guid.NewGuid();
         Guid secret1ID = Guid.NewGuid();
@@ -33,10 +33,5 @@ public class Test : MonoBehaviour
         {
             client.input.Join(",").Inspect();
         }
-    }
-
-    void Update()
-    {
-
     }
 }
