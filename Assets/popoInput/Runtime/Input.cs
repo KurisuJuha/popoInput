@@ -10,8 +10,7 @@ namespace JuhaKurisu.PopoTools.InputSystem
 
         public Input(byte[] bytes)
         {
-            DataReader reader = new DataReader(bytes);
-            this.bytes = new(reader.ReadBytes());
+            this.bytes = new(bytes);
         }
 
         public byte[] Serialize()
