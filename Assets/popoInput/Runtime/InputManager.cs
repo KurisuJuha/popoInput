@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.ObjectModel;
 using JuhaKurisu.PopoTools.ByteSerializer;
 
@@ -33,7 +34,14 @@ namespace JuhaKurisu.PopoTools.InputSystem
             // クライアントたちのデシリアライズ
             for (int i = 0; i < playerCount; i++)
             {
-                Client client = new Client(reader.ReadBytes());
+                // 全体で共有しているclientIDを読み込む
+                Guid clientID = reader.ReadGuid();
+                // input内容を読み込む
+                byte[] inputBytes = reader.ReadBytes();
+
+                // クライアントを作成
+                Client client = new Client(clientID, inputBytes);
+                // clientsにセット
                 clients[i] = client;
             }
 
