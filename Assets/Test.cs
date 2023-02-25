@@ -31,7 +31,7 @@ public class Test : MonoBehaviour
 
         foreach (var client in manager.clients)
         {
-            client.input.bytes.Join(",").Inspect();
+            client.input.Join(",").Inspect();
         }
     }
 
