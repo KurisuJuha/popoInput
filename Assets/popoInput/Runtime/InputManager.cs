@@ -53,6 +53,8 @@ namespace JuhaKurisu.PopoTools.InputSystem
         {
             DataWriter writer = new DataWriter();
 
+            // 全体で共有しているclientIDを送る
+            writer.Append(clientID);
             // サーバーとのみ共有しているsecretIDを送る
             writer.Append(secretID);
             // input内容を送る
