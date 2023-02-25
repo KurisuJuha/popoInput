@@ -8,9 +8,9 @@ namespace JuhaKurisu.PopoTools.InputSystem
     {
         public ReadOnlyCollection<Client> clients { get; private set; }
         public readonly int playerCount;
-        public readonly Func<byte[]> GetInput;
 
         public InputManager(int playerCount, Func<byte[]> GetInput)
+        private readonly Func<byte[]> GetInput;
         {
             this.playerCount = playerCount;
             this.GetInput = GetInput;
